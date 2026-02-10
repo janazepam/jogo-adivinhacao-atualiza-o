@@ -1,0 +1,257 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2a51ff, #975dd1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s;
+  }
+
+  body.dark-mode {
+    background: linear-gradient(135deg, #3131ad, #090e1b);
+  }
+
+  .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(163, 113, 113, 0.2);
+    transition: background 0.3s;
+  }
+
+  body.dark-mode .container {
+    background: #2c2c4f;
+    color: #fff;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .dificuldade {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .dificuldade button {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #ccc;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .dificuldade button.ativo {
+    background: #0b1f77;
+    color: rgb(0, 255, 47);
+    border-color: #1c3fdb;
+  }
+
+  .dificuldade button:hover {
+    border-color: #223586;
+  }
+
+  .info {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #000000;
+  }
+
+  body.dark-mode .info {
+    background: #3d3d54;
+    color: #ddd;
+  }
+
+  .input-group {
+    margin: 15px 0;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #0e2177;
+  }
+
+  input:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+
+  body.dark-mode input {
+    background: #47476f;
+    color: #fff;
+    border-color: #555;
+  }
+
+  .botoes {
+    display: flex;
+    gap: 10px;
+  }
+
+  button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .btn-tentar {
+    background: #382c72;
+    color: white;
+  }
+
+  .btn-tentar:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .btn-tentar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .btn-reiniciar {
+    background: #382c72;
+    color: white;
+  }
+
+  .btn-reiniciar:hover {
+    opacity: 0.9;
+  }
+
+  .mensagem {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 30px;
+    display: none;
+  }
+
+  .mensagem.show {
+    display: block;
+  }
+
+  .mensagem.acerto {
+    background: #d4edda;
+    color: #155724;
+  }
+
+  .mensagem.erro {
+    background: #ff9ca4;
+    color: #ff0019;
+  }
+
+  .mensagem.dica {
+    background: #d1ecf1;
+    color: #0c5460;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .stat-box {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  body.dark-mode .stat-box {
+    background: #3d3d54;
+  }
+
+  .stat-numero {
+    font-size: 20px;
+    font-weight: bold;
+    color: #667eea;
+  }
+
+  .historico {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+  }
+
+  body.dark-mode .historico {
+    border-top-color: #555;
+  }
+
+  .historico h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+
+  body.dark-mode .historico h3 {
+    color: #aaa;
+  }
+
+  .historico-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-height: 60px;
+    overflow-y: auto;
+  }
+
+    .historico-item {
+    background: #667eea;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+  }

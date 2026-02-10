@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Adivinhação com Logica</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1>Jogo da Adivinhação Usando Logica</h1>
+    <button class="theme-toggle" onclick="toggleTema()">🌙</button>
+  </header>
+
+  <div class="dificuldade">
+    <button class="ativo" onclick="selecionarDificuldade('facil', event)">Fácil</button>
+    <button onclick="selecionarDificuldade('medio', event)">Médio</button>
+    <button onclick="selecionarDificuldade('dificil', event)">Difícil</button>
+  </div>
+
+  <div class="info" id="info"></div>
+
+  <div class="input-group">
+    <input type="number" id="palpite" placeholder="Digite seu palpite" onkeypress="verificarEnter(event)">
+  </div>
+
+  <div class="botoes">
+    <button class="btn-tentar" id="btnTentar" onclick="verificar()">Tentar</button>
+    <button class="btn-reiniciar" onclick="reiniciar()">🔄 Reiniciar</button>
+  </div>
+
+  <div class="mensagem" id="mensagem"></div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div>Tentativas</div>
+      <div class="stat-numero" id="tentativas">0</div>
+    </div>
+    <div class="stat-box">
+      <div>Limite</div>
+      <div class="stat-numero" id="limite">10</div>
+    </div>
+  </div>
+
+  <div class="historico">
+    <h3>Seus palpites:</h3>
+    <div class="historico-lista" id="historicoLista"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
